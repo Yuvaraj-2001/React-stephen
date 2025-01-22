@@ -1,1 +1,2 @@
-This is a React Starter Project for use in Stephen Grider's courses on Udemy.
+
+- index.js file is the fist file that executes
