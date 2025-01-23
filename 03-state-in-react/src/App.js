@@ -1,17 +1,27 @@
 import { useState } from "react";
 import "./App.css";
+import AnimalShow from "./AnimalShow";
 
+function getRandonAnimal(){
+  const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
+  return animals[Math.floor(Math.random() * animals.length)];  // Randomly select an animal from the array.
+}
 function App() {
-
-  const [count, setCount] = useState(0);
+  const [animals, setAnimals] = useState([]);
+ 
   const handleClick = (m) => {
     console.log(m);
-    setCount(count + 1);
+    setAnimals([...animals, getRandonAnimal()]);
   }
   return (
     <div>
-      {count}
       <button onClick={handleClick}>Animal</button>
+
+    <div className="flex wrap gap-20">
+      {animals.map((a, k) => <AnimalShow animal={a} key={k}/>)} 
+
+    </div>
+
     </div>
   );
 }
