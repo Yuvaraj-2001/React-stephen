@@ -1,21 +1,27 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+import {fetchData} from "./common/methods.js" 
+import SearchBar from "./components/SearchBar.js";
+import ImageList from "./components/ImageList.js";
 
+import "./App.css";
 function App() {
+  // Use state to store the current page
+  const [images, updateImage] = useState([]);
+  const callAPI = async (param) => {
+    const response = await fetchData(param);
+    const formatedList = response.data.results.map(e => e.urls.full)
+    updateImage(formatedList);
+  };
+
   return (
     <>
-     
-      <h1>React Starter Project</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.js</code> and save to test HMR
-        </p>
+      <h1>Search Through</h1>
+      <SearchBar update={callAPI}/>
+      <div >
+        <ImageList images={images}/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
