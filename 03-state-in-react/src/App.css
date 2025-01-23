@@ -1,0 +1,36 @@
+.flex{
+  display: flex;
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.flex-column{
+  flex-direction: column;
+}
+.position-relative{
+  position: relative;
+}
+.position-absolute{
+  position: absolute;
+}
+.justify-center{
+  justify-content: center;
+}
+.center-absolute{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.gap-20{
+  gap: 20px;
+}
