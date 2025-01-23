@@ -1,1 +1,2 @@
-This is a React Starter Project for use in Stephen Grider's courses on Udemy.
+Event System - Detect a user clickng the button, onClikc, onMouseMove
+State System - Update content on the screen
