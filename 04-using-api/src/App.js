@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import {fetchData} from "./common/methods.js" 
 import SearchBar from "./components/SearchBar.js";
 import ImageList from "./components/ImageList.js";
-
+import TextEditorWithTooltip from "./components/ToolTip.js";
 import "./App.css";
 function App() {
   // Use state to store the current page
@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <h1>Search Through</h1>
+      <TextEditorWithTooltip/>
       <SearchBar update={callAPI}/>
       <div >
         <ImageList images={images}/>
