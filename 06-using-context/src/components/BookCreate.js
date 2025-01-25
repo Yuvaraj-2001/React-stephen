@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import axios from 'axios';
+import { useContext } from 'react';
+import { dataContext } from '../context/dataContext';
 
-function BookCreate({ onCreate }) {
+function BookCreate() {
   const [title, setTitle] = useState('');
+  const {createBook} = useContext(dataContext);
 
   const handleChange = (event) => {
     setTitle(event.target.value);
@@ -10,8 +12,7 @@ function BookCreate({ onCreate }) {
 
   const handleSubmit =  (event) => {
     event.preventDefault();
-   
-    onCreate(title);
+    createBook(title);
     setTitle('');
   };
 

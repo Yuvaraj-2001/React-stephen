@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import BookCreate from './components/BookCreate';
 import BookList from './components/BookList';
 import axios from 'axios';
+import { dataContext } from './context/dataContext';
+
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -52,11 +54,14 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1>Reading List</h1>
-      <BookList onEdit={editBookById} books={books} onDelete={deleteBookById} />
-      <BookCreate onCreate={createBook} />
-    </div>
+    <dataContext.Provider value={{books, deleteBookById, editBookById, createBook}}>
+       <div className="app">
+        <h1>Reading List</h1>
+        <BookList />
+        <BookCreate/>
+      </div>
+    </dataContext.Provider>
+   
   );
 }
 
