@@ -1,17 +1,24 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import { GoChevronDown, GoChevronLeft } from 'react-icons/go';
 
 function Accordion({ items }) {
   const [expandedIndex, setExpandedIndex] = useState(-1);
+  useEffect(() => {
+  debugger
 
+    console.log('Updated expandedIndex:', expandedIndex);
+  }, [expandedIndex]);
   const handleClick = (nextIndex) => {
     setExpandedIndex((currentExpandedIndex) => {
+      debugger
       if (currentExpandedIndex === nextIndex) {
         return -1;
       } else {
         return nextIndex;
       }
     });
+    debugger
+    console.log('Expanded index:', expandedIndex);
   };
 
   const renderedItems = items.map((item, index) => {
