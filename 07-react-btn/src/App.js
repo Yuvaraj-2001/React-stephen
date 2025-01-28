@@ -1,12 +1,17 @@
 import Button from './Button';
+import {FcAddColumn} from 'react-icons/fc';
+
 
 function App() {
+  const clickH = ()=>{
+    console.log('click');
+  }
   return (
     <div>
-      <h1 className='text-xl'>hellos  </h1>
+      <h1 className='text-xl bg-slate-300 underline'>hellos  </h1>
       <div>
-        <Button success rounded outline>
-          Click me!!
+        <Button className="flex gap-4" primary rounded outline onClick={clickH}>
+        <FcAddColumn />Click me!!
         </Button>
       </div>
       <div>
