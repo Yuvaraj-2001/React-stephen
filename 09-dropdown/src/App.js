@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import Dropdown from './components/Dropdown';
+// import Dropdown from './components/Dropdown';
+import BaseDropdown from './components/BaseDropdown';
 
 function App() {
-  const [selection, setSelection] = useState(null);
-
-  const handleSelect = (option) => {
-    setSelection(option);
-  };
+  const [first, setFirst] = useState(null);
+  const [second, setSecond] = useState(null);
 
   const options = [
     { label: 'Red', value: 'red' },
@@ -15,9 +13,14 @@ function App() {
   ];
 
   return (
-    <div className="flex">
-      <Dropdown options={options} value={selection} onChange={handleSelect} />
-      <Dropdown options={options} value={selection} onChange={handleSelect} />
+    <div>
+           {first} - {second}
+           <hr/>
+           <hr/>
+      <div className="flex">
+        <BaseDropdown obj={first} options={options}  update={(s) =>  setFirst(s)} />
+        <BaseDropdown obj={second}  options={options} update={(s) =>  setSecond(s)} />
+      </div>
     </div>
   );
 }
