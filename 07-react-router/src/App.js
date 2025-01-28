@@ -1,18 +1,34 @@
-import Button from "./components/Button";
+import Button from './Button';
 
 function App() {
-  return <div>
+  return (
     <div>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <Button success  warning rounded outline>Click </Button>
-      <Button danger outline>Buy now </Button>
-      <Button warning>Deal </Button>
-      <Button secondary outline>Hide </Button>
-     
+      <h1 className='text-xl'>hellos  </h1>
+      <div>
+        <Button success rounded outline>
+          Click me!!
+        </Button>
+      </div>
+      <div>
+        <Button danger outline>
+          Buy Now!
+        </Button>
+      </div>
+      <div>
+        <Button warning>See Deal!</Button>
+      </div>
+      <div>
+        <Button secondary outline>
+          Hide Ads!
+        </Button>
+      </div>
+      <div>
+        <Button secondary rounded>
+          Something!
+        </Button>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default App;
