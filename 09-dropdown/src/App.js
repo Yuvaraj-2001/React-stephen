@@ -14,7 +14,8 @@ function App() {
 
   return (
     <div>
-           {first} - {second}
+           <p>First: {first ? `${first.label} (${first.value})` : 'None'}</p>
+           <p>Second: {second ? `${second.label} (${second.value})` : 'None'}</p>
            <hr/>
            <hr/>
       <div className="flex">
