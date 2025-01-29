@@ -14,9 +14,6 @@ function CounterPage({ initialCount }) {
     setCount(count - 1);
   };
 
-  const addValue = () => {
-
-  };
 
   const handleChange = (e) =>{
 
