@@ -4,12 +4,30 @@ import Panel from '../components/Panel';
 
 function CounterPage({ initialCount }) {
   const [count, setCount] = useState(initialCount);
+  const [valueToAdd, setValueToAdd] = useState(0);
 
   const increment = () => {
     setCount(count + 1);
   };
+
   const decrement = () => {
     setCount(count - 1);
+  };
+
+  const addValue = () => {
+
+  };
+
+  const handleChange = (e) =>{
+
+    const number = parseInt(e.target.value);
+    setValueToAdd(number);
+  };
+
+  const addValueToCount = (e) => {
+    e.preventDefault();
+    setCount(count + valueToAdd);
+    setValueToAdd(0);
   };
 
   return (
@@ -24,9 +42,11 @@ function CounterPage({ initialCount }) {
         <label>Add a lot!</label>
         <input
           type="number"
+          value={valueToAdd || ''}
+          onChange={handleChange}
           className="p-1 m-3 bg-gray-50 border border-gray-300"
         />
-        <Button>Add it!</Button>
+        <Button onClick={addValueToCount}>Add it!</Button>
       </form>
     </Panel>
   );
