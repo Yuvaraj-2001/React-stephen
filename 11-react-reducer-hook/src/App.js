@@ -29,6 +29,8 @@ function App() {
         </Route>
         <Route path="/counter">
           <CounterPage initialCount={10} />
+        </Route> <Route path="/counterReducer">
+          <CounterPage initialCount={10} />
         </Route>
       </div>
     </div>
