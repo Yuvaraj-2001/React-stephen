@@ -4,7 +4,7 @@ import { songSlice } from './slices/songSlice';
 import { addSong,  removeSong } from './slices/songSlice';
 
 // movies slice
-import { moviesSlice, addMovie, removeMovie, reset} from './slices/moviesSlice';
+import { moviesSlice, addMovie, removeMovie} from './slices/moviesSlice';
 
 const store = configureStore({
     reducer:{
@@ -14,4 +14,4 @@ const store = configureStore({
 });
 
 
-export {store, addSong, removeSong, addMovie, reset, removeMovie}
+export {store, addSong, removeSong, addMovie, removeMovie}

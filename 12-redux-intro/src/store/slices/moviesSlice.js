@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { reset } from '../action';
 
 const moviesSlice = createSlice({
     name: 'movie',
@@ -14,9 +15,14 @@ const moviesSlice = createSlice({
             state.splice(0, state.length);
         //    return [];
         }
+    },
+    extraReducers(builder){
+        builder.addCase(reset, (state, action)=>{
+            return [];
+        })
     }
 
 });
 
-export const {addMovie, removeMovie, reset} = moviesSlice.actions;
+export const {addMovie, removeMovie} = moviesSlice.actions;
 export {moviesSlice};
