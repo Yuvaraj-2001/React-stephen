@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "name": "Nicolas Gerhold",
+      "id": 1
+    },
+    {
+      "name": "Thomas Breitenberg",
+      "id": 2
+    },
+    {
+      "name": "Eunice Cole",
+      "id": 3
+    },
+    {
+      "name": "Brendan Kassulke",
+      "id": 4
+    },
+    {
+      "name": "Jimmy Gerlach",
+      "id": 5
+    }
+  ],
+  "albums": [],
+  "photos": []
+}
