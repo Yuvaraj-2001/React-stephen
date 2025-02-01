@@ -12,9 +12,11 @@ const usersSlice = createSlice({
   },
   extraReducers(builder) {
     builder.addCase(fetchUsers.pending, (state, action) => {
+      debugger
       state.isLoading = true;
     });
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
+      debugger
       state.isLoading = false;
       state.data = action.payload;
     });
