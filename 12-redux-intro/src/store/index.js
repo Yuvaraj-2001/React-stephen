@@ -1,10 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import { songSlice } from './slices/songSlice';
-import { addSong, removeSong } from './slices/songSlice';
+import { addSong,  removeSong } from './slices/songSlice';
 
 // movies slice
-import { moviesSlice, addMovie, removeMovie } from './slices/moviesSlice';
+import { moviesSlice, addMovie, removeMovie, reset} from './slices/moviesSlice';
 
 const store = configureStore({
     reducer:{
@@ -14,4 +14,4 @@ const store = configureStore({
 });
 
 
-export {store, addSong, removeSong, addMovie, removeMovie}
+export {store, addSong, removeSong, addMovie, reset, removeMovie}

@@ -10,6 +10,11 @@ const songSlice = createSlice({
         removeSong: (state, action) => {
             state.splice(action.payload, 1);
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase('movie/reset', (state, action)=>{
+            return [];
+        })
     }
    
 });
