@@ -5,14 +5,20 @@
       "name": "Myra"
     },
     {
-      "name": "Elsie Price",
-      "id": 3
-    },
-    {
       "name": "Harold Strosin",
       "id": 4
+    },
+    {
+      "name": "Alex Kling",
+      "id": 5
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Qui voluptas occaecati",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
