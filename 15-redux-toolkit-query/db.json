@@ -15,49 +15,14 @@
   ],
   "albums": [
     {
-      "id": 10,
-      "title": "Qui voluptas occaecati",
-      "userId": 1
-    },
-    {
-      "title": "Oriental Granite Bacon",
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "title": "Fantastic Cotton Keyboard",
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "title": "Luxurious Wooden Mouse",
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "title": "Refined Granite Pants",
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "title": "Ergonomic Fresh Chicken",
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "title": "Recycled Steel Pizza",
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "title": "Recycled Plastic Towels",
-      "userId": 1,
-      "id": 17
-    },
-    {
       "title": "Handmade Cotton Fish",
       "userId": 1,
       "id": 18
+    },
+    {
+      "title": "Elegant Rubber Shirt",
+      "userId": 4,
+      "id": 20
     }
   ],
   "photos": []
